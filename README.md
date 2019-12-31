@@ -132,3 +132,25 @@ var deviceModels: [String]
 import UIKit
 var deviceModels: [String]
 ```
+
+### Brackets
+
+**Preferred**:
+```swift
+if user.isHappy {
+  // Do something
+} else {
+  // Do something else
+}
+```
+
+**Not Preferred**:
+```swift
+if user.isHappy
+{
+  // Do something
+}
+else {
+  // Do something else
+}
+```
