@@ -243,6 +243,21 @@ if(x == 0 && y == 0) || z == 0 {
 }
 ```
 
+**Preferred**:
+```swift
+let nonNegativeCubes = numbers.map { $0 * $0 * $0 }.filter { $0 >= 0 }
+```
+
+**Not Preferred**:
+```swift
+let nonNegativeCubes = numbers.map { $0 * $0 * $0 } .filter { $0 >= 0 }
+```
+
+**Not Preferred**:
+```swift
+let nonNegativeCubes = numbers.map{$0 * $0 * $0}.filter{$0 >= 0}
+```
+
 ### Use of Self
 
 For conciseness, avoid using `self` since Swift does not require it to access an object's properties or invoke its methods.
