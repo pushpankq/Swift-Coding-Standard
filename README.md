@@ -418,6 +418,37 @@ var employees: Dictionary<Int, String>
 var faxNumber: Optional<Int>
 ```
 
+## Optionals
+
+Declare variables and function return types as optional with `?` where a `nil` value is acceptable.
+
+**Preferred**:
+```swift
+if
+    let id = jsonObject[Constants.Id] as? Int,
+    let firstName = jsonObject[Constants.firstName] as? String,
+    let lastName = jsonObject[Constants.lastName] as? String,
+    let initials = jsonObject[Constants.initials] as? String {
+        // Flat
+        let user = User(id: id, name: name, initials: initials)
+        // ...
+}
+```
+
+**Not Preferred**:
+```swift
+if let id = jsonObject[Constants.id] as? Int {
+    if let firstName = jsonObject[Constants.firstName] as? String {
+        if let lastName = jsonObject[Constants.lastName] as? String {
+            if let initials = jsonObject[Constants.initials] as? String {
+                // Deep nesting
+                let user = User(id: id, firstName: name, lastName: lastName, initials: initials)
+                // ...
+            }
+        }
+    }
+}
+```
 
 ## Memory Management
 
