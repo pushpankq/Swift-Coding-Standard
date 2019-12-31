@@ -136,7 +136,7 @@ extension HomeViewController {
 // MARK: - IBActions
 extension HomeViewController {
     @IBAction func actionCancel(_ sender: Any) {
-        self.dismiss(animated: true) {}
+        self.dismiss(animated: true)
     }
 }
 ```
