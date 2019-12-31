@@ -210,3 +210,52 @@ var diameter: Double {
   }
 }
 ```
+
+## Closure Expressions
+
+Use trailing closure syntax only if there's a single closure expression parameter at the end of the argument list. Give the closure parameters descriptive names.
+
+**Preferred**:
+```swift
+UIView.animate(withDuration: 1.0) {
+  self.myView.alpha = 0
+}
+
+UIView.animate(withDuration: 1.0, animations: {
+  self.myView.alpha = 0
+}, completion: { finished in
+  self.myView.removeFromSuperview()
+})
+```
+
+**Not Preferred**:
+```swift
+UIView.animate(withDuration: 1.0, animations: {
+  self.myView.alpha = 0
+})
+
+UIView.animate(withDuration: 1.0, animations: {
+  self.myView.alpha = 0
+}) { f in
+  self.myView.removeFromSuperview()
+}
+```
+
+For single-expression closures where the context is clear, use implicit returns:
+
+```swift
+attendeeList.sort { a, b in
+  a > b
+}
+```
+
+Chained methods using trailing closures should be clear and easy to read in context. Decisions on spacing, line breaks, and when to use named versus anonymous arguments is left to the discretion of the author. Examples:
+
+```swift
+let value = numbers.map { $0 * 2 }.filter { $0 % 3 == 0 }.index(of: 90)
+
+let value = numbers
+  .map {$0 * 2}
+  .filter {$0 > 50}
+  .map {$0 + 10}
+```
