@@ -167,3 +167,20 @@ let anyString = "This is random string"
 ```swift
 let anyString = "This is random string";
 ```
+### Spacing
+
+Colons always have no space on the left and one space on the right. Exceptions are the ternary operator ? :, empty dictionary [:] and #selector syntax addTarget(_:action:).
+
+**Preferred**:
+```swift
+class TestDatabase: Database {
+  var data: [String: CGFloat] = ["A": 1.2, "B": 3.2]
+}
+```
+
+**Not Preferred**:
+```swift
+class TestDatabase : Database {
+  var data :[String:CGFloat] = ["A" : 1.2, "B":3.2]
+}
+```
