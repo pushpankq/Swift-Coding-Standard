@@ -263,7 +263,7 @@ let nonNegativeCubes = numbers.map{$0 * $0 * $0}.filter{$0 >= 0}
 
 3. On both sides of any binary or ternary operator, including the “operator-like” symbols described below, with exceptions noted at the end:
 
-        a. The = sign used in assignment, initialization of variables/properties, and default arguments in functions.
+    a. The = sign used in assignment, initialization of variables/properties, and default arguments in functions.
 **Preferred**:
 ```swift
             var x = 5
@@ -281,7 +281,7 @@ func sum(_ numbers: [Int], initialValue: Int=0) {
   // ...
 }
 ```
-        b. The ampersand (&) in a protocol composition type.
+   b. The ampersand (&) in a protocol composition type.
         
 **Preferred**:
 
@@ -299,7 +299,7 @@ func sayHappyBirthday(to person: NameProviding&AgeProviding) {
 }
 ```
 
-        c. The operator symbol in a function declaring/implementing that operator.
+   c. The operator symbol in a function declaring/implementing that operator.
 **Preferred**:
 
 ```swift
@@ -315,7 +315,7 @@ static func ==(lhs: MyType, rhs: MyType) -> Bool {
 }
 ```
 
-        d. The arrow (->) preceding the return type of a function.
+   d. The arrow (->) preceding the return type of a function.
         
 **Preferred**:
 
@@ -330,86 +330,18 @@ func sum(_ numbers: [Int])->Int {
   // ...
 }
 ```
-        e. #### Exception: There is no space on either side of the dot (.) used to reference value and type members.
+   e. #### Exception: There is no space on either side of the dot (.) used to reference value and type members.
+   
+**Preferred**:
 
-let width = view.bounds.width
+```swift
+let width = view.bounds.width 
+```
+**Not Preferred**:
+
+```swift
 let width = view . bounds . width
-Exception: There is no space on either side of the ..< or ... operators used in range expressions.
-
-for number in 1...5 {
-  // ...
-}
-
-let substring = string[index..<string.endIndex]
-for number in 1 ... 5 {
-  // ...
-}
-
-let substring = string[index ..< string.endIndex]
-After, but not before, the comma (,) in parameter lists and in tuple/array/dictionary literals.
-
-let numbers = [1, 2, 3]
-let numbers = [1,2,3]
-let numbers = [1 ,2 ,3]
-let numbers = [1 , 2 , 3]
-After, but not before, the colon (:) in
-
-Superclass/protocol conformance lists and generic constraints.
-
-struct HashTable: Collection {
-  // ...
-}
-
-struct AnyEquatable<Wrapped: Equatable>: Equatable {
-  // ...
-}
-struct HashTable : Collection {
-  // ...
-}
-
-struct AnyEquatable<Wrapped : Equatable> : Equatable {
-  // ...
-}
-Function argument labels and tuple element labels.
-
-let tuple: (x: Int, y: Int)
-
-func sum(_ numbers: [Int]) {
-  // ...
-}
-let tuple: (x:Int, y:Int)
-let tuple: (x : Int, y : Int)
-
-func sum(_ numbers:[Int]) {
-  // ...
-}
-
-func sum(_ numbers : [Int]) {
-  // ...
-}
-Variable/property declarations with explicit types.
-
-let number: Int = 5
-let number:Int = 5
-let number : Int = 5
-Shorthand dictionary type names.
-
-var nameAgeMap: [String: Int] = []
-var nameAgeMap: [String:Int] = []
-var nameAgeMap: [String : Int] = []
-Dictionary literals.
-
-let nameAgeMap = ["Ed": 40, "Timmy": 9]
-let nameAgeMap = ["Ed":40, "Timmy":9]
-let nameAgeMap = ["Ed" : 40, "Timmy" : 9]
-At least two spaces before and exactly one space after the double slash (//) that begins an end-of-line comment.
-
-let initialFactor = 2  // Warm up the modulator.
-let initialFactor = 2 //    Warm up the modulator.
-Outside, but not inside, the brackets of an array or dictionary literals and the parentheses of a tuple literal.
-
-let numbers = [1, 2, 3]
-let numbers = [ 1, 2, 3 ]
+```
 
 ### Use of Self
 
