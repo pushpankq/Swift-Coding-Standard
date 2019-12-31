@@ -115,6 +115,33 @@ class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDel
 }
 ```
 
+### Code grouping 
+A good manner of coding is to group a code into the logical parts. Use // MARK
+And break functionality into parts with the help of extension.
+
+```swift
+// MARK: - ViewController Life Cycle 
+extension HomeViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        checkPermission()
+     }
+ 
+ override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadAsset(with: self.asset)
+    }
+}
+    
+// MARK: - IBActions
+extension HomeViewController {
+    @IBAction func actionCancel(_ sender: Any) {
+        self.dismiss(animated: true) {}
+    }
+}
+```
+
+
 ### Minimal Imports
 
 Import only the modules a source file requires. For example, don't import `UIKit` when importing `Foundation` will suffice. Likewise, don't import `Foundation` if you must import `UIKit`.
