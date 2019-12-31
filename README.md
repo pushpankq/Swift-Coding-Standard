@@ -356,3 +356,20 @@ var lookup = [String: Int]()
 ```
 
 **NOTE**: Following this guideline means picking descriptive names is even more important than before.
+
+### Syntactic Sugar
+
+Prefer the shortcut versions of type declarations over the full generics syntax.
+
+**Preferred**:
+```swift
+var deviceModels: [String]
+var employees: [Int: String]
+var faxNumber: Int?
+```
+
+**Not Preferred**:
+```swift
+var deviceModels: Array<String>
+var employees: Dictionary<Int, String>
+var faxNumber: Optional<Int>
