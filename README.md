@@ -154,3 +154,16 @@ else {
   // Do something else
 }
 ```
+### Semicolons
+
+Semicolon is not required in SWIFT. 
+
+**Preferred**:
+```swift
+let anyString = "This is random string"
+```
+
+**Not Preferred**:
+```swift
+let anyString = "This is random string";
+```
