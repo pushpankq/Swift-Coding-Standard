@@ -100,3 +100,36 @@ extension MyViewController: UIScrollViewDelegate {
 class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
   // all methods
 }
+
+
+```
+### Minimal Imports
+
+Import only the modules a source file requires. For example, don't import `UIKit` when importing `Foundation` will suffice. Likewise, don't import `Foundation` if you must import `UIKit`.
+
+**Preferred**:
+```
+import UIKit
+var view: UIView
+var deviceModels: [String]
+```
+
+**Preferred**:
+```
+import Foundation
+var deviceModels: [String]
+```
+
+**Not Preferred**:
+```
+import UIKit
+import Foundation
+var view: UIView
+var deviceModels: [String]
+```
+
+**Not Preferred**:
+```
+import UIKit
+var deviceModels: [String]
+```
