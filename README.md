@@ -373,3 +373,42 @@ var faxNumber: Int?
 var deviceModels: Array<String>
 var employees: Dictionary<Int, String>
 var faxNumber: Optional<Int>
+```
+
+
+## Memory Management
+
+Code (even non-production, tutorial demo code) should not create reference cycles. Analyze your object graph and prevent strong cycles with `weak` and `unowned` references. Alternatively, use value types (`struct`, `enum`) to prevent cycles altogether.
+
+### Extending object lifetime
+
+Extend object lifetime using the `[weak self]` and `guard let self = self else { return }` idiom. `[weak self]` is preferred to `[unowned self]` where it is not immediately obvious that `self` outlives the closure. Explicitly extending lifetime is preferred to optional chaining.
+
+**Preferred**
+```swift
+resource.request().onComplete { [weak self] response in
+  guard let self = self else {
+    return
+  }
+  let model = self.updateModel(response)
+  self.updateUI(model)
+}
+```
+
+**Not Preferred**
+```swift
+// might crash if self is released before response returns
+resource.request().onComplete { [unowned self] response in
+  let model = self.updateModel(response)
+  self.updateUI(model)
+}
+```
+
+**Not Preferred**
+```swift
+// deallocate could happen between updating the model and updating UI
+resource.request().onComplete { [weak self] response in
+  let model = self?.updateModel(response)
+  self?.updateUI(model)
+}
+```
