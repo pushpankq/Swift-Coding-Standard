@@ -147,14 +147,16 @@ extension HomeViewController {
 Import only the modules a source file requires. For example, don't import `UIKit` when importing `Foundation` will suffice. Likewise, don't import `Foundation` if you must import `UIKit`.
 
 **Preferred**:
-```
+
+```swift
 import UIKit
 var view: UIView
 var deviceModels: [String]
 ```
 
 **Preferred**:
-```
+
+```swift
 import Foundation
 var deviceModels: [String]
 ```
@@ -168,7 +170,8 @@ var deviceModels: [String]
 ```
 
 **Not Preferred**:
-```
+
+```swift
 import UIKit
 var deviceModels: [String]
 ```
