@@ -227,6 +227,21 @@ class TestDatabase : Database {
   var data :[String:CGFloat] = ["A" : 1.2, "B":3.2]
 }
 ```
+### Horizontal Whitespace
+
+**Preferred**:
+```swift
+if (x == 0 && y == 0) || z == 0 {
+  // ...
+}
+```
+
+**Not Preferred**:
+```swift
+if(x == 0 && y == 0) || z == 0 {
+  // ...
+}
+```
 
 ### Use of Self
 
