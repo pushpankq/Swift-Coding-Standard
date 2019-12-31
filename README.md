@@ -22,7 +22,7 @@ Source files are encoded in UTF-8.
 
 Follow apple default comment style 
 
-```
+```swift
 /// Returns the magnitude of a vector in three dimensions
 /// from the given components.
 ///
