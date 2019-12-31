@@ -39,7 +39,7 @@ func magnitude3D(x: Double, y: Double, z: Double) -> Double {
 
 Demonstrate the proper usage or implementation details of a function by embedding code blocks. Inset code blocks by at least four spaces:
 
-```
+```swift
 /**
     The area of the `Shape` instance.
 
