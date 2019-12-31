@@ -74,6 +74,17 @@ Descriptive and consistent naming makes software easier to read and understand. 
 - labeling closure and tuple parameters
 - taking advantage of default parameters
 
+**Preferred**:
+```swift
+class HomeViewController: UIViewController {
+}
+```
+**Not Preferred**:
+```swift
+class Home_View_Controller: UIViewController {
+}
+```
+
 ### Protocol Conformance
 
 In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
