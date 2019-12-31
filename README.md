@@ -486,3 +486,8 @@ resource.request().onComplete { [weak self] response in
   self?.updateUI(model)
 }
 ```
+
+
+## References
+
+-   [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
