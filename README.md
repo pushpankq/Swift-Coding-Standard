@@ -491,3 +491,4 @@ resource.request().onComplete { [weak self] response in
 ## References
 
 -   [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
+-   [Google swift style guide](https://google.github.io/swift/)
