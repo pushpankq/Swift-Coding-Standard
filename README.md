@@ -162,7 +162,7 @@ var deviceModels: [String]
 ```
 
 **Not Preferred**:
-```
+```swift
 import UIKit
 import Foundation
 var view: UIView
