@@ -100,6 +100,7 @@ extension MyViewController: UIScrollViewDelegate {
 class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
   // all methods
 }
+```
 
 
 ```
