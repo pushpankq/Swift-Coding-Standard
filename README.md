@@ -77,11 +77,13 @@ Descriptive and consistent naming makes software easier to read and understand. 
 **Preferred**:
 ```swift
 class HomeViewController: UIViewController {
+  // class stuff here
 }
 ```
 **Not Preferred**:
 ```swift
 class Home_View_Controller: UIViewController {
+  // class stuff here
 }
 ```
 
