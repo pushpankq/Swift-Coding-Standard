@@ -190,3 +190,23 @@ class TestDatabase : Database {
 For conciseness, avoid using `self` since Swift does not require it to access an object's properties or invoke its methods.
 
 Use self only when required by the compiler (in `@escaping` closures, or in initializers to disambiguate properties from arguments). In other words, if it compiles without `self` then omit it.
+
+### Computed Properties
+
+For conciseness, if a computed property is read-only, omit the get clause. The get clause is required only when a set clause is provided.
+
+**Preferred**:
+```swift
+var diameter: Double {
+  return radius * 2
+}
+```
+
+**Not Preferred**:
+```swift
+var diameter: Double {
+  get {
+    return radius * 2
+  }
+}
+```
