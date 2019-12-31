@@ -524,5 +524,10 @@ let message = "You cannot charge the flux " +
 
 ## References
 
--   [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
--   [Google swift style guide](https://google.github.io/swift/)
+* [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
+* [Google swift style guide](https://google.github.io/swift/)
+* [The Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
+* [The Swift Programming Language](https://developer.apple.com/library/prerelease/ios/documentation/swift/conceptual/swift_programming_language/index.html)
+* [Using Swift with Cocoa and Objective-C](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/index.html)
+* [Swift Standard Library Reference](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/SwiftStandardLibraryReference/index.html)
+
