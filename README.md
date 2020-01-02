@@ -229,6 +229,10 @@ class TestDatabase : Database {
   var data :[String:CGFloat] = ["A" : 1.2, "B":3.2]
 }
 ```
+ In general, there should be a space following a comma.
+ ```swift
+let myArray = [1, 2, 3, 4, 5]
+```
 ### Horizontal Whitespace
 
 1. Separating any reserved word starting a conditional or switch statement (such as if, guard, while, or switch) from the expression that follows it if that expression starts with an open parenthesis (()
