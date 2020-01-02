@@ -1,7 +1,7 @@
 
 # Swift Coding Standard
 
-## Source File Basics
+## Source File Basic
 ### File Names
 All Swift source files end with the extension  `.swift`.
 A file that extends an existing type with protocol conformance is named with a combination of the type name and the protocol name, joined with a plus (`+`) sign. For more complex situations, exercise your best judgment.
@@ -95,7 +95,6 @@ class Home_View_Controller: UIViewController {
 ```swift
 class RoundAnimatingButton: UIButton { /* ... */ }
 ```
-
 
 **Not Preferred**:
 ```swift
