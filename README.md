@@ -178,6 +178,8 @@ var deviceModels: [String]
 
 ### Brackets
 
+Do not place opening braces on new lines
+
 **Preferred**:
 ```swift
 if user.isHappy {
