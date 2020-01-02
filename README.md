@@ -68,7 +68,7 @@ Descriptive and consistent naming makes software easier to read and understand. 
 - beginning factory methods with `make`
 - using terms that don't surprise experts or confuse beginners
 - generally avoiding abbreviations
-- using precedent for names
+- use PascalCase for type names (e.g. struct, enum, class, typedef, associatedtype, etc.).
 - preferring methods and properties to free functions
 - casing acronyms and initialisms uniformly up or down
 - giving the same base name to methods that share the same meaning
