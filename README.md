@@ -64,7 +64,6 @@ Descriptive and consistent naming makes software easier to read and understand. 
 - using uppercase for types (and protocols), lowercase for everything else
 - including all needed words while omitting needless words
 - using names based on roles, not types
-- names should be descriptive and unambiguous.
 - using terms that don't surprise experts or confuse beginners
 - generally avoiding abbreviations
 - use PascalCase for type names (e.g. struct, enum, class, typedef, associatedtype, etc.).
@@ -90,6 +89,8 @@ class Home_View_Controller: UIViewController {
 }
 ```
 
+-   Names should be descriptive and unambiguous.
+
 **Preferred**:
 ```swift
 class RoundAnimatingButton: UIButton { /* ... */ }
@@ -99,6 +100,30 @@ class RoundAnimatingButton: UIButton { /* ... */ }
 **Not Preferred**:
 ```swift
 class CustomButton: UIButton { /* ... */ }
+```
+
+-   Do not abbreviate, use shortened names, or single letter names.
+
+**Preferred**:
+```swift
+class RoundAnimatingButton: UIButton {
+    let animationDuration: NSTimeInterval
+
+    func startAnimating() {
+        let firstSubview = subviews.first
+    }
+}
+```
+
+**Not Preferred**:
+```swift
+class RoundAnimating: UIButton {
+    let aniDur: NSTimeInterval
+
+    func srtAnmating() {
+        let v = subviews.first
+    }
+}
 ```
 
 ### Protocol Conformance
