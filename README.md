@@ -709,7 +709,31 @@ for i in 0...15 {
     }
  }
 ```
+## Access Control
 
+Full access control annotation in tutorials can distract from the main topic and is not required. Using `private` and `fileprivate` appropriately, however, adds clarity and promotes encapsulation. Prefer `private` to `fileprivate`; use `fileprivate` only when the compiler insists.
+
+Only explicitly use `open`, `public`, and `internal` when you require a full access control specification.
+
+Use access control as the leading property specifier. The only things that should come before access control are the `static` specifier or attributes such as `@IBAction`, `@IBOutlet` and `@discardableResult`.
+
+**Preferred**:
+```swift
+private let message = "Great Scott!"
+
+class TimeMachine {  
+  private dynamic lazy var fluxCapacitor = FluxCapacitor()
+}
+```
+
+**Not Preferred**:
+```swift
+fileprivate let message = "Great Scott!"
+
+class TimeMachine {  
+  lazy dynamic private var fluxCapacitor = FluxCapacitor()
+}
+```
 ## References
 
 * [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
