@@ -759,6 +759,10 @@ func updateConstraints() -> () {
 typealias CompletionHandler = (result) -> ()
 ```
 
+#### Make classes `final` by default
+
+Classes should start as `final`, and only be changed to allow subclassing if a valid need for inheritance has been identified. Even in that case, as many definitions as possible _within_ the class should be `final` as well, following the same rules.
+
 ## References
 
 * [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
