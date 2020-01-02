@@ -60,7 +60,7 @@ var area: CGFloat { get }
 
 Descriptive and consistent naming makes software easier to read and understand. Use the Swift naming conventions described in the [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/). Some key takeaways include:
 
-- using camel case (not snake case)
+- Use camelCase (initial lowercase letter) for function, method, property, constant, variable, argument names, enum cases, etc
 - using uppercase for types (and protocols), lowercase for everything else
 - including all needed words while omitting needless words
 - using names based on roles, not types
