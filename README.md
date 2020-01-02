@@ -36,6 +36,7 @@ func magnitude3D(x: Double, y: Double, z: Double) -> Double {
 ```
 
 Always leave a space after //.
+
 Always leave comments on their own line.
 
 ### Code blocks
