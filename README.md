@@ -808,6 +808,40 @@ typealias CompletionHandler = (result) -> ()
 
 Classes should start as `final`, and only be changed to allow subclassing if a valid need for inheritance has been identified. Even in that case, as many definitions as possible _within_ the class should be `final` as well, following the same rules.
 
+## High Order Function 
+
+Prefer the composition of map, filter, reduce, etc. over iterating when transforming from one collection to another. Make sure to avoid using closures that have side effects when using these methods.
+
+**Preferred**:
+```swift
+let stringOfInts = [1, 2, 3].flatMap { String($0) }
+// ["1", "2", "3"]
+```
+
+**Not Preferred**:
+```swift
+var stringOfInts: [String] = []
+for integer in [1, 2, 3] {
+    stringOfInts.append(String(integer))
+}
+```
+
+**Preferred**:
+```swift
+let evenNumbers = [4, 8, 15, 16, 23, 42].filter { $0 % 2 == 0 }
+// [4, 8, 16, 42]
+```
+
+**Not Preferred**:
+```swift
+var evenNumbers: [Int] = []
+for integer in [4, 8, 15, 16, 23, 42] {
+    if integer % 2 == 0 {
+        evenNumbers.append(integer)
+    }
+}
+```
+
 ## References
 
 * [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
