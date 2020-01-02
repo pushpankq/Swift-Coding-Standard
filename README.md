@@ -35,6 +35,9 @@ func magnitude3D(x: Double, y: Double, z: Double) -> Double {
 }
 ```
 
+Always leave a space after //.
+Always leave comments on their own line.
+
 ### Code blocks
 
 Demonstrate the proper usage or implementation details of a function by embedding code blocks. Inset code blocks by at least four spaces:
