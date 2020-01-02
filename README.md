@@ -690,6 +690,27 @@ result = isHorizontal ? x : y
 result = a > b ? x = c > d ? c : d : y
 ```
 
+## For Loop 
+
+**Preferred**:
+
+```swift
+for i in 0...15 where i == 4  {
+            {
+                print("its four")
+            }
+        }
+```
+
+**Not Preferred**:
+
+```swift
+for i in 0...15 {
+            if i == 4 {
+                print("its four")
+            }
+        }
+```
 
 ## References
 
