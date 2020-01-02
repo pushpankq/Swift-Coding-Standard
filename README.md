@@ -90,6 +90,17 @@ class Home_View_Controller: UIViewController {
 }
 ```
 
+**Preferred**:
+```swift
+class RoundAnimatingButton: UIButton { /* ... */ }
+```
+
+
+**Not Preferred**:
+```swift
+class CustomButton: UIButton { /* ... */ }
+```
+
 ### Protocol Conformance
 
 In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
