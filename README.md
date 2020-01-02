@@ -696,7 +696,7 @@ result = a > b ? x = c > d ? c : d : y
 
 ```swift
  for i in 0...15 where i == 4  {
-                print("its four")
+    print("its four")
  }
 ```
 
@@ -706,7 +706,7 @@ result = a > b ? x = c > d ? c : d : y
 for i in 0...15 {
     if i == 4 {
         print("its four")
-        }
+    }
  }
 ```
 
