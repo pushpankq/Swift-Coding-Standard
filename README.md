@@ -64,8 +64,7 @@ Descriptive and consistent naming makes software easier to read and understand. 
 - using uppercase for types (and protocols), lowercase for everything else
 - including all needed words while omitting needless words
 - using names based on roles, not types
-- striving for fluent usage
-- beginning factory methods with `make`
+- names should be descriptive and unambiguous.
 - using terms that don't surprise experts or confuse beginners
 - generally avoiding abbreviations
 - use PascalCase for type names (e.g. struct, enum, class, typedef, associatedtype, etc.).
