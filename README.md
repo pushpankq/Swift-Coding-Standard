@@ -734,6 +734,31 @@ class TimeMachine {
   lazy dynamic private var fluxCapacitor = FluxCapacitor()
 }
 ```
+
+## Function 
+
+Don't use `(Void)` to represent the lack of an input; simply use `()`. Use `Void` instead of `()` for closure and function outputs.
+
+**Preferred**:
+
+```swift
+func updateConstraints() -> Void {
+  // magic happens here
+}
+
+typealias CompletionHandler = (result) -> Void
+```
+
+**Not Preferred**:
+
+```swift
+func updateConstraints() -> () {
+  // magic happens here
+}
+
+typealias CompletionHandler = (result) -> ()
+```
+
 ## References
 
 * [Raywenderlich swift style guide](https://github.com/raywenderlich/swift-style-guide)
