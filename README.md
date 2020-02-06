@@ -620,7 +620,7 @@ Extend object lifetime using the `[weak self]` and `guard let self = self else {
 **Preferred**
 ```swift
 resource.request().onComplete { [weak self] response in
-  guard let `self` = self else {
+  guard let self = self else {
     return
   }
   let model = self.updateModel(response)
